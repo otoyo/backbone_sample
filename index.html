@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Backbone.js sample</title>
+    <link rel="stylesheet" href="lib/twitter-bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="lib/jquery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="lib/underscore/underscore-1.4.4.min.js"></script>
+    <script type="text/javascript" src="lib/backbone/backbone-0.9.10.min.js"></script>
+    <script type="text/javascript" src="lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <div class="padding10"></div>
+      
+      <div id="header">
+        <h1 style="margin-top:0;">Backbone.js sample</h1>
+
+        <div class="padding10"></div>
+
+        <p><a href="http://atnd.org/events/36234">TechBuzz 第4回.js系開発技術勉強会</a> で発表した Backbone.js のサンプルです。</p>
+
+        <p><a href="#" class="btn btn-primary"><i class="icon-file icon-white" style="margin-right:.25em;"></i>ソースコード</a></p>
+      </div>
+      
+      <div class="padding20"></div>
+      
+      <div id="content">
+        <ul id="nav-bar" class="nav nav-tabs" style="margin-bottom:10px;">
+          <li class="nav-items active"><a href="javascript:void(0);">東京</a></li>
+          <li class="nav-items"><a href="javascript:void(0);">大阪</a></li>
+        </ul>
+
+        <ul id="weekly"></ul>
+      </div>
+      
+      <div class="padding20"></div>
+      
+      <div id="footer">
+        Weather icons by (C) <a href="http://www.dotvoid.se/index.en.html">Dotvoid AB</a>, Malin Holm. <br />
+        Copyright &copy; 2013 Hiroki Toyokawa All Rights Reserved.
+      </div>
+      
+      <div class="padding10"></div>
+    </div>
+    
+    <script type="text/template" id="daily-template">
+      <li class="daily" style="display:none;">
+        <div class="date pull-left"><%= date %></div>
+        <div class="weather-icon pull-left"><img src="<%= icon %>" /></div>
+        <div class="weather-info pull-left">
+          降水確率: <span class="larger"><%= rainfallchance %>%</span><br />
+          気温: <span class="text-error"><%= temperatureMax %>℃</span>／<span class="text-info"><%= temperatureMin %>℃</span>
+        </div>
+        <div class="clearfix"></div>
+      </li>
+    </script>
+    
+    <!-- Backbone.js -->
+    <script type="text/javascript" src="lib/backbone/models/weather.js"></script>
+    <script type="text/javascript" src="lib/backbone/views/content.js"></script>
+    <script type="text/javascript">
+      var weather = new Weather();
+      var contentView = new ContentView({model:weather});
+    </script>
+  </body>
+</html>

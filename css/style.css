@@ -1,0 +1,69 @@
+
+.padding5 {
+  padding: 2.5px;
+}
+
+.padding10 {
+  padding: 5px;
+}
+
+.padding15 {
+  padding: 7.5px;
+}
+
+.padding20 {
+  padding: 10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.larger {
+  font-size: 150%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #555;
+}
+div#main {
+  width: 760px;
+  margin: auto;
+  padding: 0 14px;
+  background-color: #fff;
+}
+ul#weekly {
+  height: 518px;
+  margin: 0;
+  list-style: none;
+}
+ul#weekly > li.daily {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+ul#weekly > li.daily > div.date {
+  width: 80px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 28px;
+}
+ul#weekly > li.daily > div.weather-icon {
+  width: 60px;
+  height: 50px;
+  text-align: center;
+}
+ul#weekly > li.daily > div.weather-info {
+  width: 240px;
+  height: 50px;
+  margin-top: .2em;
+  margin-left: 15px;
+  line-height: 1.5em;
+  font-size: 14px;
+}
+div#footer {
+  text-align: center;
+  color: #666;
+}
